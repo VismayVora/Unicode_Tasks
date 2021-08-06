@@ -29,17 +29,20 @@ key_list = list(words_dict.keys())
 val_list = list(words_dict.values())
 
 
-n1 = 1
-n2 = 1
+n1 = 1 # n1 is the number of times the most repeated word has occurred.
+n2 = 1 # n2 is the number of times the least repeated word has occurred.
 for value in val_list:
     if n1 < value:
         n1 = value
     if n2 > value:
         n2 = value
-
-position_highest = val_list.index(n1)
-position_lowest = val_list.index(n2)
-
 print("\n")
-print("\nThe most repeated word is '{}'.".format(key_list[position_highest]))
-print("The least repeated word is '{}'.".format(key_list[position_lowest]))
+print("\nThe most repeated word(s) is/are:")
+for key,value in words_dict.items():
+    if value == n1:
+        print(key)
+
+print("\nThe least repeated word(s) is/are:")
+for key,value in words_dict.items():    
+    if value == n2:
+        print(key)
