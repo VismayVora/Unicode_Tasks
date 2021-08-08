@@ -6,4 +6,5 @@ urlpatterns = [
    path('', views.index, name='index'),   
    path('types/', views.types, name='types'),
    #path('type/',show_poke_form.show_poke_form, name='show_poke_view'),
+   #path('types/<int:id>/',views.pokemon)
   ]
